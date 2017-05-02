@@ -68,39 +68,23 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-window.boris = {
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrays_chunk_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__arrays_compact_js__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__arrays_zip_js__ = __webpack_require__(3);
+
+
+
+
+window.Boris = {
 
   // Array methods
 
-  chunk: (array, size = 1) => {
-    const results = [];
-    let count = 0,
-        nestedArray = [],
-        currentElement;
-
-    for (let i = 0; i < array.length; i++) {
-      currentElement = array[i];
-      nestedArray.push(currentElement);
-      count += 1;
-
-      if (count === size) {
-        results.push(nestedArray);
-        nestedArray = [];
-        count = 0;
-      }
-    }
-
-    return results;
-
-  },
-
-  compact: (input) => {
-    return input.filter(element => {
-      return element;
-    });
-  },
+  chunk: __WEBPACK_IMPORTED_MODULE_0__arrays_chunk_js__["a" /* default */],
+  compact: __WEBPACK_IMPORTED_MODULE_1__arrays_compact_js__["a" /* default */],
 
   // If extra element is single-item array (i.e [4] ),
   // the element is extracted and pushed to the end.
@@ -133,36 +117,80 @@ window.boris = {
     return array.slice(0, array.length - number);
   },
 
+  filter: (array, callback) => {
+    return array.filter(element => {
+      return callback(element);
+    });
+  },
+
   first: (input) => {
     if (input.constructor === Array || typeof input === "string") {
       return input[0];
     }
   },
 
-
-  zip: (...arrays) => {
-    let results = [];
-    let firstArray = arrays[0];
-
-    firstArray.forEach((element, idx) => {
-      const nestedArray = arrays.map(array => {
-        return array[idx];
-      });
-      results.push(nestedArray);
-    });
-
-    return results;
-  }
-
-
-  // Collection methods
-
-
-
-
-
+  zip: __WEBPACK_IMPORTED_MODULE_2__arrays_zip_js__["a" /* default */]
 
 };
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ((array, size = 1) => {
+  const results = [];
+  let count = 0,
+      nestedArray = [],
+      currentElement;
+
+  for (let i = 0; i < array.length; i++) {
+    currentElement = array[i];
+    nestedArray.push(currentElement);
+    count += 1;
+
+    if (count === size) {
+      results.push(nestedArray);
+      nestedArray = [];
+      count = 0;
+    }
+  }
+
+  return results;
+});
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ((input) => {
+  return input.filter(element => {
+    return element;
+  });
+});
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ((...arrays) => {
+  let results = [];
+  let firstArray = arrays[0];
+
+  firstArray.forEach((element, idx) => {
+    const nestedArray = arrays.map(array => {
+      return array[idx];
+    });
+    results.push(nestedArray);
+  });
+
+  return results;
+});
 
 
 /***/ })
