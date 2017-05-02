@@ -273,7 +273,7 @@ exports.default = function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var entries = exports.entries = function entries(object) {
+var entries = function entries(object) {
   var results = [];
   for (var property in object) {
     if (object.hasOwnProperty(property)) {
@@ -282,6 +282,8 @@ var entries = exports.entries = function entries(object) {
   }
   return results;
 };
+
+exports.default = entries;
 
 /***/ }),
 /* 10 */
@@ -328,6 +330,12 @@ var _zip2 = _interopRequireDefault(_zip);
 
 var _entries = __webpack_require__(9);
 
+var _entries2 = _interopRequireDefault(_entries);
+
+var _entriesIn = __webpack_require__(11);
+
+var _entriesIn2 = _interopRequireDefault(_entriesIn);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.Boris = {
@@ -346,10 +354,32 @@ window.Boris = {
 
   // Object methods
 
-  entries: _entries.entries,
-  toPairs: _entries.entries
+  entries: _entries2.default,
+  toPairs: _entries2.default,
+  entriesIn: _entriesIn2.default,
+  toPairsIn: _entriesIn2.default
 
 };
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var entriesIn = function entriesIn(object) {
+  var results = [];
+  for (var property in object) {
+    results.push([property, object[property]]);
+  }
+  return results;
+};
+
+exports.default = entriesIn;
 
 /***/ })
 /******/ ]);
