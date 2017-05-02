@@ -9,7 +9,7 @@ arrays, objects, strings and more.
 2) Execute `npm install`.
 3) Execute `npm run webpack`
 4) Open index.html in the browser.
-5) The library's functionalities will be available in the browner console.
+5) The library's functionalities will be available in the browser console.
   - Mac: **Command + Option + I**
   - Windows: **Ctrl + Shift + J**
 
