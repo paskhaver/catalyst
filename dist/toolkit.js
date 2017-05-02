@@ -74,7 +74,19 @@
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrays_chunk_js__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__arrays_compact_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__arrays_zip_js__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__arrays_concat_js__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__arrays_difference_js__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__arrays_drop_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__arrays_dropRight_js__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__arrays_filter_js__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__arrays_first_js__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__arrays_zip_js__ = __webpack_require__(3);
+
+
+
+
+
+
 
 
 
@@ -85,51 +97,13 @@ window.Boris = {
 
   chunk: __WEBPACK_IMPORTED_MODULE_0__arrays_chunk_js__["a" /* default */],
   compact: __WEBPACK_IMPORTED_MODULE_1__arrays_compact_js__["a" /* default */],
-
-  // If extra element is single-item array (i.e [4] ),
-  // the element is extracted and pushed to the end.
-  // Thus, 4 is the same as [4]. If extra element is
-  // a nested array, (i.e. [[4]] or [[4, 5]]), then
-  // the full array is concatenated to the end.
-  concat: (array, ...extraElements) => {
-    const dupeArray = array.slice();
-    extraElements.forEach(element => {
-      dupeArray.push(element);
-    });
-
-    return dupeArray;
-  },
-
-  difference: (array, exclusions) => {
-    return array.filter(element => {
-      return !exclusions.includes(element);
-    });
-  },
-
-  drop: (array, number = 1) => {
-    return array.slice(number);
-  },
-
-  dropRight: (array, number = 1) => {
-    if (number >= array.length) {
-      return [];
-    }
-    return array.slice(0, array.length - number);
-  },
-
-  filter: (array, callback) => {
-    return array.filter(element => {
-      return callback(element);
-    });
-  },
-
-  first: (input) => {
-    if (input.constructor === Array || typeof input === "string") {
-      return input[0];
-    }
-  },
-
-  zip: __WEBPACK_IMPORTED_MODULE_2__arrays_zip_js__["a" /* default */]
+  concat: __WEBPACK_IMPORTED_MODULE_2__arrays_concat_js__["a" /* default */],
+  difference: __WEBPACK_IMPORTED_MODULE_3__arrays_difference_js__["a" /* default */],
+  drop: __WEBPACK_IMPORTED_MODULE_4__arrays_drop_js__["a" /* default */],
+  dropRight: __WEBPACK_IMPORTED_MODULE_5__arrays_dropRight_js__["a" /* default */],
+  filter: __WEBPACK_IMPORTED_MODULE_6__arrays_filter_js__["a" /* default */],
+  first: __WEBPACK_IMPORTED_MODULE_7__arrays_first_js__["a" /* default */],
+  zip: __WEBPACK_IMPORTED_MODULE_8__arrays_zip_js__["a" /* default */]
 
 };
 
@@ -190,6 +164,85 @@ window.Boris = {
   });
 
   return results;
+});
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// If extra element is single-item array (i.e [4] ),
+// the element is extracted and pushed to the end.
+// Thus, 4 is the same as [4]. If extra element is
+// a nested array, (i.e. [[4]] or [[4, 5]]), then
+// the full array is concatenated to the end.
+/* harmony default export */ __webpack_exports__["a"] = ((array, ...extraElements) => {
+  const dupeArray = array.slice();
+  extraElements.forEach(element => {
+    dupeArray.push(element);
+  });
+
+  return dupeArray;
+});
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ((array, exclusions) => {
+  return array.filter(element => {
+    return !exclusions.includes(element);
+  });
+});
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ((array, number = 1) => {
+  return array.slice(number);
+});
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ((array, number = 1) => {
+  if (number >= array.length) {
+    return [];
+  }
+  return array.slice(0, array.length - number);
+});
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ((array, callback) => {
+  return array.filter(element => {
+    return callback(element);
+  });
+});
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ((input) => {
+  if (input.constructor === Array || typeof input === "string") {
+    return input[0];
+  }
 });
 
 
