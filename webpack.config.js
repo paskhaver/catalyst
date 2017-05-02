@@ -1,10 +1,10 @@
 var path = require('path');
 
 module.exports = {
-  entry: "./lib/main.js",
+  entry: "./index.jsx",
   output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: "toolkit.js"
+      filename: "bundle.js"
   },
   module: {
     loaders: [
