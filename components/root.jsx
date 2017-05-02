@@ -8,11 +8,16 @@ class Root extends React.Component {
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
     this.state = { input: [],
-                   calculation: "Enter an array in the box above and click a function", 
+                   calculation: "Enter an array in the box above and click a function",
                    theFunction: "" };
   }
 
   handleButtonClick(event) {
+
+    // The event.target.value will equal a string representing the method name
+    // Use macgyver library to extract the proper method
+    // The method is then invoked with the argument of the current state
+
     this.setState({
       calculation: JSON.stringify(macgyver[event.target.value](this.state.input)),
       theFunction: macgyver[event.target.value].toString()
