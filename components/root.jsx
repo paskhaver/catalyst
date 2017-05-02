@@ -7,7 +7,9 @@ class Root extends React.Component {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
-    this.state = { input: [], calculation: 0, theFunction: "" };
+    this.state = { input: [],
+                   calculation: "Enter an array in the box above and click a function", 
+                   theFunction: "" };
   }
 
   handleButtonClick(event) {
@@ -34,9 +36,9 @@ class Root extends React.Component {
 
     const methods = Object.keys(macgyver);
           methods.sort();
-    const methodItems = methods.map(method => {
+    const methodItems = methods.map((method, idx) => {
       return (
-        <input type="button" onClick={ this.handleButtonClick } value={method} />
+        <input type="button" onClick={ this.handleButtonClick } value={method} key={idx} />
       );
     });
 
@@ -46,13 +48,18 @@ class Root extends React.Component {
                onChange={this.handleEdit }/>
              { methodItems }
 
+        <div className="the-pieces">
 
-        <div className="calculation">
-          {this.state.calculation}
-        </div>
+          <div className="the-calculation">
+            <h1>The Results:</h1>
+            {this.state.calculation}
+          </div>
 
-        <div className="the-function">
-          {this.state.theFunction}
+          <div className="the-function">
+            <h1>The Code:</h1>
+            {this.state.theFunction}
+          </div>
+
         </div>
       </div>
     );

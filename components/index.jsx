@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import macgyver from "./lib/macgyver.js";
-import Root from "./components/root";
+import macgyver from "./../lib/macgyver";
+import Root from "./root";
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  window.mac = macgyver;
+  window.macgyver = macgyver;
 
   const rootDOMElement = document.getElementById("app");
   ReactDOM.render(<Root />, rootDOMElement);

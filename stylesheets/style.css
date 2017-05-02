@@ -3,15 +3,23 @@
   margin: 40px auto;
   width: 1000px;
   background-color: lightblue;
+
 }
 
-.calculation {
+.the-pieces {
+  display: flex;
+  flex-direction: rows;
+}
+
+.the-calculation {
+  box-sizing: border-box;
   width: 500px;
   height: 200px;
   background-color: orange;
 }
 
 .the-function {
+  box-sizing: border-box;
   width: 500px;
   height: 200px;
   background-color: yellow;
