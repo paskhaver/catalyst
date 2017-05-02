@@ -31,12 +31,22 @@ class Root extends React.Component {
 
 
   render() {
+
+    const methods = Object.keys(macgyver);
+          methods.sort();
+    const methodItems = methods.map(method => {
+      return (
+        <input type="button" onClick={ this.handleButtonClick } value={method} />
+      );
+    });
+
     return (
       <div className="main">
         <input type="text" placeholder="Enter array here"
                onChange={this.handleEdit }/>
-             <input type="button" onClick={this.handleButtonClick} value={"first"} />
-             <input type="button" onClick={this.handleButtonClick} value={"drop"} />
+             { methodItems }
+
+
         <div className="calculation">
           {this.state.calculation}
         </div>
