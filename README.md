@@ -3,6 +3,8 @@
 **Catalyst** is a JavaScript utility library for common operations with
 arrays, objects, strings, numbers and more. It is built with ES6.
 
+![chunk Method](/screenshots/chunk-method.png)
+
 # Setup Instructions
 
 1) Download or clone repository from GitHub.
@@ -24,5 +26,10 @@ catalyst.invert({
 
 # Features
 
-- 30+ methods for operations
-- Comprehensive documentation built in with explain("method") name
+- 30+ utility methods including `intersection`, `assign` and `compact`
+- Comprehensive documentation built in with `explain` method
+
+```
+catalyst.explain("chunk");
+```
+![explain Method](/screenshots/explain-method.png)
