@@ -9,7 +9,7 @@ arrays, objects, strings, numbers and more. It is built with ES6.
 
 1) Download or clone repository from GitHub.
 2) Navigate into `catalyst-master` folder and execute `npm install`
-   The procedure will generate a catalyst.js file within the folder.
+The command will generate a catalyst.js file within the folder.
 3) Open the Node REPL by executing `node` in Terminal.
 4) Require the catalyst library and assign it to a sample variable.
 `const catalyst = require("./catalyst")`
@@ -23,6 +23,8 @@ catalyst.invert({
 
 //--> {2: "a", 3: "b"}
 ```
+
+![Setup Process](/screenshots/setup.png)
 
 # Features
 
