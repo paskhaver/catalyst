@@ -7,13 +7,16 @@ arrays, objects, strings, numbers and more. It is built with ES6.
 
 # Setup Instructions
 
+An installation of [Node](https://nodejs.org/en/) is required for this demo.
+
 1) Download or clone repository from GitHub.
-2) Navigate into `catalyst-master` folder and execute `npm install`
+2) Unzip to reveal a `catalyst-master` directory.
+3) Navigate into `catalyst-master` and execute `npm install`
 The command will generate a catalyst.js file within the folder.
-3) Open the Node REPL by executing `node` in Terminal.
-4) Require the catalyst library and assign it to a sample variable.
+4) Open the Node REPL by executing `node` in Terminal.
+5) Require the catalyst library and assign it to a sample variable.
 `const catalyst = require("./catalyst")`
-5) Use `catalyst` to test the functionalities of the library.
+6) Use `catalyst` to test the functionalities of the library.
 
 ```javascript
 catalyst.invert({
