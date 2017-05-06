@@ -31,7 +31,7 @@ catalyst.invert({
 - Utilize 30+ helper methods including `intersection`, `assign` and `compact`
 - Discover available methods through `methods` property
 
-<img src="./screenshots/methods-property.png" alt="methods Property" height="500"/>
+<img src="./screenshots/methods-property.png" alt="methods Property" height="400"/>
 
 - Access comprehensive documentation for any method by passing its
 name as a string to the `explain` method
