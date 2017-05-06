@@ -28,8 +28,12 @@ catalyst.invert({
 
 # Features
 
-- 30+ utility methods including `intersection`, `assign` and `compact`
-- Comprehensive documentation built in with `explain` method
+- Utilize 30+ helper methods including `intersection`, `assign` and `compact`
+- Discover available methods through `methods` property
+
+![methods Property](/screenshots/methods-property.png)
+
+- Find comprehensive documentation built in with `explain` method
 
 ```
 catalyst.explain("chunk");
