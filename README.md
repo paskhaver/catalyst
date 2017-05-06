@@ -24,7 +24,7 @@ catalyst.invert({
 //--> {2: "a", 3: "b"}
 ```
 
-<img src="./screenshots/setup.png" alt="Setup Process" height="200"/>
+<img src="./screenshots/setup.png" alt="Setup Process" height="100"/>
 
 # Features
 
