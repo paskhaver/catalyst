@@ -5,9 +5,12 @@ arrays, objects, strings and more.
 
 # Instructions
 
-1) Open node with `node`
-2) Execute `const catalyst = require("./catalyst")`
-3) Use `catalyst` to test the functionalities of the library.
+1) Download or clone repository from GitHub.
+2) Navigate to primary `catalyst` folder and execute `npm install`
+3) Open the Node REPL by executing `node` in Terminal.
+4) Require the catalyst library and assign it to a sample variable.
+`const catalyst = require("./catalyst")`
+5) Use `catalyst` to test the functionalities of the library.
 
 ```javascript
 catalyst.invert({
