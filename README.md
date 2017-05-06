@@ -3,7 +3,7 @@
 **Catalyst** is a JavaScript utility library for common operations with
 arrays, objects, strings, numbers and more. It is built with ES6.
 
-![chunk Method](/screenshots/chunk-method.png)
+<img src="./screenshots/chunk-method.png" alt="chunk method" height="200"/>
 
 # Setup Instructions
 
@@ -24,7 +24,7 @@ catalyst.invert({
 //--> {2: "a", 3: "b"}
 ```
 
-![Setup Process](/screenshots/setup.png)
+<img src="./screenshots/setup.png" alt="Setup Process" height="200"/>
 
 # Features
 
