@@ -17,6 +17,7 @@ The command will generate a catalyst.js file within the folder.
 5) Require the catalyst library and assign it to a constant.
 
 `const catalyst = require("./catalyst")`
+
 6) Use `catalyst` to test the functionalities of the library.
 
 ```javascript
