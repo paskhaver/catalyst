@@ -14,7 +14,8 @@ An installation of [Node](https://nodejs.org/en/) is required for this demo.
 3) Navigate into `catalyst-master` and execute `npm install`
 The command will generate a catalyst.js file within the folder.
 4) Open the Node REPL by executing `node` in Terminal.
-5) Require the catalyst library and assign it to a sample variable.
+5) Require the catalyst library and assign it to a constant.
+
 `const catalyst = require("./catalyst")`
 6) Use `catalyst` to test the functionalities of the library.
 
