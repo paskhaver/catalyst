@@ -6,7 +6,7 @@ arrays, objects, strings and more.
 # Instructions
 
 1) Open node with `node`
-2) Execute `const catalyst = require("./dist/bundle.js").default`
+2) Execute `const catalyst = require("./catalyst")`
 3) Use `catalyst` to test the functionalities of the library.
 
 ```javascript

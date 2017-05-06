@@ -1,10 +1,10 @@
 var path = require('path');
 
 module.exports = {
-  entry: "./lib/catalyst.js",
+  entry: "./lib/main.js",
   output: {
-      path: path.resolve(__dirname, 'dist'),
-      filename: "bundle.js",
+      path: path.resolve(__dirname),
+      filename: "catalyst.js",
       library: "",
       libraryTarget: "commonjs"
   },
