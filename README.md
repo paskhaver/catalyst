@@ -1,4 +1,4 @@
-# Catalyst
+<img src="./screenshots/catalyst-logo.png" alt="chunk method" height="100"/>
 
 **Catalyst** is a JavaScript utility library for common operations with
 arrays, objects, strings, numbers and more. It is built with ES6.
